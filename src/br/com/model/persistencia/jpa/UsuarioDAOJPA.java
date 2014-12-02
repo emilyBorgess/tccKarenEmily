@@ -13,5 +13,7 @@ public class UsuarioDAOJPA  extends DAOJPA <Usuario, Integer> implements Usuario
     public List<Usuario> getByNome(String Nome) {
         return getEntityManager().createQuery("select x from Usuario x where x.nome like '%" + Nome + "%'").getResultList();
     }
+
+    
     
 }

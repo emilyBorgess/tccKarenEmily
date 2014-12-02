@@ -213,7 +213,8 @@ public class DisciplinaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-         if((Validador.validaCampoVazio(txDescricao.getText().trim(), "Campo não pode ser nulo!"))
+         if((Validador.validaCampoVazio(txDescricao.getText().trim(), "O campo não pode ser nulo!"))&&
+                 (Validador.somenteLetras(txDescricao.getText().trim(), "O campo só aceita letras!"))
                ){
         Disciplina d = new Disciplina();
         d.setNome(txDescricao.getText());

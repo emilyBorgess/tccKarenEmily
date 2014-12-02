@@ -8,6 +8,7 @@ package br.com.view;
 
 import br.com.controller.TurmaController;
 import br.com.model.Turma;
+import br.com.validador.Validador;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -219,6 +220,11 @@ public class TurmaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+        if((Validador.validaCampoVazio(txDescricao.getText().trim(), "O campo não pode ser nulo!"))&&
+                (Validador.somenteNumeros(txDescricao.getText().trim(),"O campo só aceita números!")))
+             
+           {
+        
         Turma t = new Turma();
         t.setDescricao(txDescricao.getText());
         if(!txCodigo.getText().equals("")){
@@ -232,6 +238,8 @@ public class TurmaGUI extends javax.swing.JFrame {
         }
 
         dispose();
+        
+           }
     }//GEN-LAST:event_btSalvarActionPerformed
 
     /**

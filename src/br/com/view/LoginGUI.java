@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package br.com.view;
 
-/**
- *
- * @author Emily
- */
+import br.com.controller.UsuarioController;
+import br.com.model.Usuario;
+
+
 public class LoginGUI extends javax.swing.JFrame {
 
    
@@ -17,6 +13,7 @@ public class LoginGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,13 +29,13 @@ public class LoginGUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txLogin = new javax.swing.JTextField();
-        txSenha = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btEntrar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        txSenha = new javax.swing.JPasswordField();
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
@@ -79,8 +76,6 @@ public class LoginGUI extends javax.swing.JFrame {
 
         txLogin.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        txSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/img4.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -102,6 +97,11 @@ public class LoginGUI extends javax.swing.JFrame {
         btEntrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/login.png"))); // NOI18N
         btEntrar.setText("Entrar");
+        btEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrarActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancel.png"))); // NOI18N
@@ -110,6 +110,8 @@ public class LoginGUI extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("© 2014 Todos os direitos reservados  •  KahEmy Systems");
+
+        txSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -130,6 +132,9 @@ public class LoginGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(220, 220, 220)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(270, 270, 270)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -138,11 +143,8 @@ public class LoginGUI extends javax.swing.JFrame {
                                         .addComponent(jButton1))
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel2)
-                                    .addComponent(txLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txSenha)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(220, 220, 220)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                                    .addComponent(txSenha))))
                         .addGap(0, 181, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -165,13 +167,13 @@ public class LoginGUI extends javax.swing.JFrame {
                 .addComponent(txLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(90, 90, 90)
                 .addComponent(jLabel5)
@@ -195,6 +197,10 @@ public class LoginGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
+
+    }//GEN-LAST:event_btEntrarActionPerformed
+
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -210,6 +216,6 @@ public class LoginGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField txLogin;
-    private javax.swing.JTextField txSenha;
+    private javax.swing.JPasswordField txSenha;
     // End of variables declaration//GEN-END:variables
 }

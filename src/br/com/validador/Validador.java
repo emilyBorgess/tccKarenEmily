@@ -24,7 +24,7 @@ public abstract class Validador {
             
             if (letra.matches("\\d")){ 
                 // Se a letra estiver dentro da ER retorna FALSE, pois apenas letras são suportadas.
-                JOptionPane.showMessageDialog(null, msg + " inválido(a), apenas letras são suportadas!");
+                JOptionPane.showMessageDialog(null, msg + " inválido(a)!");
                 return false;
             }
         }
@@ -46,7 +46,7 @@ public abstract class Validador {
             
             if (!letra.matches("\\d")){ 
                 // Se a letra estiver dentro da ER retorna FALSE, pois apenas letras são suportadas.
-                JOptionPane.showMessageDialog(null, msg + " inválido(a), apenas números são suportados!");
+                JOptionPane.showMessageDialog(null, msg + " inválido(a)!");
                 return false;
             }
         }     
@@ -86,7 +86,7 @@ public abstract class Validador {
  */
   public static boolean validaCampoVazio(String text, String msg){
        if((text == null) || (text.equals(""))){
-               JOptionPane.showMessageDialog(null, msg + " inválido(a), o campo está vazio!");
+               JOptionPane.showMessageDialog(null, msg + " inválido(a)!");
                return false;
        }
        return true;
