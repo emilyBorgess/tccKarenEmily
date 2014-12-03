@@ -89,7 +89,8 @@ private int linhaSelecionada;
         );
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setText(" Reservas");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/reserva.png"))); // NOI18N
+        jLabel1.setText("Reservas");
 
         jPanel2.setBackground(new java.awt.Color(51, 110, 123));
         jPanel2.setPreferredSize(new java.awt.Dimension(550, 30));

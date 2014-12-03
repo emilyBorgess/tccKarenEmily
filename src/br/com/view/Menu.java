@@ -130,7 +130,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel4.setText("Entrada de Exemplares, Empréstimos, Reservas");
 
         btReserva.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btReserva.setText("Reservas");
+        btReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/reserva.png"))); // NOI18N
         btReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btReservaActionPerformed(evt);
@@ -172,17 +172,15 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btExemplar)
-                            .addComponent(btEmprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel6))))
-                    .addComponent(btReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btExemplar)
+                    .addComponent(btEmprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btReserva))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel6)))
                 .addContainerGap())
         );
 
@@ -201,7 +199,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         btColecao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btColecao.setText(" Coleção");
+        btColecao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/colecao.png"))); // NOI18N
         btColecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btColecaoActionPerformed(evt);
@@ -209,7 +207,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         btAutor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btAutor.setText("Autores");
+        btAutor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/autor.png"))); // NOI18N
         btAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btAutorActionPerformed(evt);
@@ -233,7 +231,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         Diretor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Diretor.setText("Diretor");
+        Diretor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/diretor.png"))); // NOI18N
         Diretor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DiretorActionPerformed(evt);
@@ -241,7 +239,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         assunto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        assunto.setText("Assunto");
+        assunto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/assunto.png"))); // NOI18N
         assunto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assuntoActionPerformed(evt);
@@ -297,7 +295,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         btProfessor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btProfessor.setText("Prof");
+        btProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/professor.png"))); // NOI18N
         btProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btProfessorActionPerformed(evt);
@@ -305,7 +303,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Disciplinas");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/disciplina.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -366,7 +364,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btTurma)
                         .addComponent(btProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btAluno)))
